@@ -7,7 +7,6 @@ export default function TodoCreate() {
 
     const dispatch = useDispatch()
 
-    // useState'in tipini belirtme ; useState<tip>()
     const [newTodo,setNewTodo] = useState<string>('')
 
     const handleCreateTodo = () => {
@@ -25,7 +24,6 @@ export default function TodoCreate() {
         setNewTodo("")
     }
 
-    // eventin tipini () yaptıktan sonra tooltip'te gözüküyor kopyala e: React.ChangeEvent<HTMLInputElement> yapıştır.
   return (
     <div className='w-[500px] flex flex-col justify-center items-center  !mt-10 !p-2 rounded'>
         <input value={newTodo} onChange={(e:React.ChangeEvent<HTMLInputElement>) => setNewTodo(e.target.value)} placeholder='Todo Giriniz...' className='w-full outline-none border-b border-b-neutral-600' type='text' />
